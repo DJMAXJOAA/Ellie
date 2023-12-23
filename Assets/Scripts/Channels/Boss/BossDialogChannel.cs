@@ -1,5 +1,6 @@
 ﻿using Channels.Components;
 using Channels.Type;
+using Managers;
 
 namespace Channels.Boss
 {

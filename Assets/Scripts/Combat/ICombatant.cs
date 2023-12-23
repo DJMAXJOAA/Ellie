@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.Combat
+﻿using Managers;
+
+namespace Combat
 {
     public interface ICombatant
     {

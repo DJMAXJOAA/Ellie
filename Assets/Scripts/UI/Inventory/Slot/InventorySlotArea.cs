@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Managers;
-using Assets.Scripts.UI.Framework;
-using Assets.Scripts.UI.Framework.Presets;
-using Assets.Scripts.Utils;
 using Channels.UI;
+using Managers;
+using UI.Framework;
+using UI.Framework.Presets;
 using UnityEngine;
 using UnityEngine.UI;
-using static Assets.Scripts.Managers.InventorySavePayload;
+using Utils;
+using static Managers.Save.InventorySavePayload;
 
-namespace Assets.Scripts.UI.Inventory
+namespace UI.Inventory.Slot
 {
     public enum SlotAreaType
     {

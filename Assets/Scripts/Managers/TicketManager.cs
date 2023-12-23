@@ -6,7 +6,7 @@ using Channels.Type;
 using Channels.Utils;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers
 {
     public class TicketManager : Singleton<TicketManager>
     {

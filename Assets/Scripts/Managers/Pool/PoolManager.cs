@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Managers.Pool.PoolTask;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers.Pool
 {
     public class PoolManager : Singleton<PoolManager>
     {
         public float cleanInterval = 0.1f;
 
         private readonly IDictionary<string, Pool> pools = new Dictionary<string, Pool>();
-        public readonly PoolTask poolTask = new();
+        public readonly PoolTask.PoolTask poolTask = new();
 
         private Transform root;
 

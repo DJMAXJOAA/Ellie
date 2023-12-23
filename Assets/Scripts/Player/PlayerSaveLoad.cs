@@ -1,10 +1,10 @@
 ﻿using System.Collections;
-using Assets.Scripts.Centers;
-using Assets.Scripts.Managers;
-using Assets.Scripts.Utils;
+using Managers;
+using Managers.Save;
 using UnityEngine;
+using Utils;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     public class PlayerSaveLoad : MonoBehaviour
     {

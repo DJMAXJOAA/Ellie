@@ -1,7 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers.Sound
+namespace Managers.Sound
 {
     public class SoundManagerTestClient : MonoBehaviour
     {

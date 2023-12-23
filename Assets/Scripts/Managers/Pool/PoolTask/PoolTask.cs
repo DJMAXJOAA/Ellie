@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace Assets.Scripts.Managers
+namespace Managers.Pool.PoolTask
 {
     public class PoolTask
     {

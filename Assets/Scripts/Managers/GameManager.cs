@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers
 {
     public struct Resolution
     {

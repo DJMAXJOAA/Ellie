@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers.RangeIndicator;
+using Managers.RangeIndicator.Range;
 using UnityEngine;
 using TheKiwiCoder;
 

@@ -1,107 +1,109 @@
 using System;
 using System.Collections.Generic;
-using Assets.Scripts.Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public enum EventBusEvents
+namespace Managers
 {
-    None,
-    GripStoneByBoss1,
-    ThrowStoneByBoss1,
-    HitManaByPlayerStone,
-    DestroyedManaByBoss1,
-    OccurEarthQuake,
-    DropMagicStalactite,
-    BossAttractedByMagicStone,
-    BossUnattractedByMagicStone,
-    IntakeMagicStoneByBoss1,
-    BossDeath,
-    HitStone,
-    BossMeleeAttack,
-    BossLowAttack,
-    ApplyBossCooldown,
-    BossMinionAttack,
-    DestroyAllManaFountain,
-    ApplySingleBossCooldown,
-    StartIntakeMagicStone,
-    ActivateMagicStone
-}
-
-public interface IBaseEventPayload
-{
-}
-
-public class EventWrapper
-{
-    private Action<IBaseEventPayload> actionEvent;
-
-    public void Subscribe(Action<IBaseEventPayload> listener)
+    public enum EventBusEvents
     {
-        actionEvent -= listener;
-        actionEvent += listener;
+        None,
+        GripStoneByBoss1,
+        ThrowStoneByBoss1,
+        HitManaByPlayerStone,
+        DestroyedManaByBoss1,
+        OccurEarthQuake,
+        DropMagicStalactite,
+        BossAttractedByMagicStone,
+        BossUnattractedByMagicStone,
+        IntakeMagicStoneByBoss1,
+        BossDeath,
+        HitStone,
+        BossMeleeAttack,
+        BossLowAttack,
+        ApplyBossCooldown,
+        BossMinionAttack,
+        DestroyAllManaFountain,
+        ApplySingleBossCooldown,
+        StartIntakeMagicStone,
+        ActivateMagicStone
     }
 
-    public void Invoke(IBaseEventPayload payload)
+    public interface IBaseEventPayload
     {
-        actionEvent?.Invoke(payload);
     }
 
-    public void Clear()
+    public class EventWrapper
     {
-        actionEvent = null;
-    }
-}
+        private Action<IBaseEventPayload> actionEvent;
 
-public class EventBus : Singleton<EventBus>
-{
-    [ShowInInspector] [ReadOnly] private Dictionary<EventBusEvents, EventWrapper> eventTable = new();
-
-    public override void Awake()
-    {
-        base.Awake();
-
-        InitEventTable();
-    }
-
-    private void InitEventTable()
-    {
-        eventTable.Clear();
-        var eventTypes = Enum.GetValues(typeof(EventBusEvents));
-        for (var i = 0; i < eventTypes.Length; i++)
+        public void Subscribe(Action<IBaseEventPayload> listener)
         {
-            eventTable.TryAdd((EventBusEvents)eventTypes.GetValue(i), new EventWrapper());
+            actionEvent -= listener;
+            actionEvent += listener;
+        }
+
+        public void Invoke(IBaseEventPayload payload)
+        {
+            actionEvent?.Invoke(payload);
+        }
+
+        public void Clear()
+        {
+            actionEvent = null;
         }
     }
 
-    public override void ClearAction()
+    public class EventBus : Singleton<EventBus>
     {
-        Debug.Log($"{name} ClearAction");
+        [ShowInInspector] [ReadOnly] private Dictionary<EventBusEvents, EventWrapper> eventTable = new();
 
-        foreach (var eventName in eventTable.Keys)
+        public override void Awake()
         {
-            if (eventTable.TryGetValue(eventName, out var wrapper))
+            base.Awake();
+
+            InitEventTable();
+        }
+
+        private void InitEventTable()
+        {
+            eventTable.Clear();
+            var eventTypes = Enum.GetValues(typeof(EventBusEvents));
+            for (var i = 0; i < eventTypes.Length; i++)
             {
-                wrapper.Clear();
+                eventTable.TryAdd((EventBusEvents)eventTypes.GetValue(i), new EventWrapper());
             }
         }
 
-        InitEventTable();
-    }
-
-    public void Subscribe(EventBusEvents eventName, Action<IBaseEventPayload> listener)
-    {
-        if (eventTable.TryGetValue(eventName, out var wrapper))
+        public override void ClearAction()
         {
-            wrapper.Subscribe(listener);
+            Debug.Log($"{name} ClearAction");
+
+            foreach (var eventName in eventTable.Keys)
+            {
+                if (eventTable.TryGetValue(eventName, out var wrapper))
+                {
+                    wrapper.Clear();
+                }
+            }
+
+            InitEventTable();
         }
-    }
 
-    public void Publish(EventBusEvents eventName, IBaseEventPayload payload)
-    {
-        if (eventTable.TryGetValue(eventName, out var wrapper))
+        public void Subscribe(EventBusEvents eventName, Action<IBaseEventPayload> listener)
         {
-            wrapper.Invoke(payload);
+            if (eventTable.TryGetValue(eventName, out var wrapper))
+            {
+                wrapper.Subscribe(listener);
+            }
+        }
+
+        public void Publish(EventBusEvents eventName, IBaseEventPayload payload)
+        {
+            if (eventTable.TryGetValue(eventName, out var wrapper))
+            {
+                wrapper.Invoke(payload);
+            }
         }
     }
 }

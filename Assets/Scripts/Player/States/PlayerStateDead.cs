@@ -1,9 +1,9 @@
-﻿using Assets.Scripts.Managers;
-using Channels.Type;
+﻿using Channels.Type;
 using Channels.UI;
+using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Player.States
+namespace Player.States
 {
     public class PlayerStateDead : PlayerBaseState
     {

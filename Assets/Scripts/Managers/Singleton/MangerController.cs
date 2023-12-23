@@ -1,7 +1,6 @@
 using System;
-using Assets.Scripts.Particle;
 
-namespace Assets.Scripts.Managers.Singleton
+namespace Managers.Singleton
 {
     public enum ManagerType
     {

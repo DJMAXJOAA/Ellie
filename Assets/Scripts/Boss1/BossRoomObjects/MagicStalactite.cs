@@ -1,11 +1,11 @@
-﻿using Assets.Scripts.Managers;
-using Assets.Scripts.Particle;
-using Channels.Boss;
+﻿using Channels.Boss;
 using Channels.Components;
+using Managers;
+using Particle;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Boss.Objects
+namespace Boss1.BossRoomObjects
 {
     public class MagicStalactite : MonoBehaviour
     {

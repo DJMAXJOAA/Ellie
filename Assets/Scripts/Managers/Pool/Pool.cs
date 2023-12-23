@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Utils;
+using Managers.Pool.PoolTask;
 using UnityEngine;
+using Utils;
 using Object = UnityEngine.Object;
 
-namespace Assets.Scripts.Managers
+namespace Managers.Pool
 {
     public class Pool
     {

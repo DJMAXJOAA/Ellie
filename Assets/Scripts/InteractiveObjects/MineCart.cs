@@ -1,12 +1,12 @@
 ﻿using System;
-using Assets.Scripts.Managers;
-using Assets.Scripts.Player;
 using Channels.Components;
 using Channels.UI;
+using Managers.Save;
 using Outline;
+using Player;
 using UnityEngine;
 
-namespace Assets.Scripts.InteractiveObjects
+namespace InteractiveObjects
 {
     public class MineCart : InteractiveObject
     {
@@ -17,7 +17,7 @@ namespace Assets.Scripts.InteractiveObjects
         [SerializeField] private Transform playerEndPos;
         [SerializeField] private bool isActivated;
         [SerializeField] private float duration;
-        [SerializeField] private Renderer renderer;
+        [SerializeField] private new Renderer renderer;
 
         private bool canJump;
 

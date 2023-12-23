@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using Assets.Scripts.Managers;
+using Managers.Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Assets.Scripts.Centers
+namespace Managers
 {
     //Build세팅 할 때 Scene 넘버 확인해서 추가 / 수정
     public enum SceneName

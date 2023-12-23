@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Managers.Pool;
+using Managers.Sound;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers
 {
     public class SoundManager : Singleton<SoundManager>
     {
@@ -24,7 +26,7 @@ namespace Assets.Scripts.Managers
         private readonly Dictionary<string, AudioClip> AudioClips = new();
 
         //풀 생성 후, 플레이하고자 하는 bgm을 딕셔너리에서 찾아서 오디오 소스에 붙여서 해당 위치로 이동시킨 후 플레이
-        private Pool audioControllerPool;
+        private Pool.Pool audioControllerPool;
 
         private AudioController audioControllerPrefab;
 

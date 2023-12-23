@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers
 {
     public class Singleton<T> : SerializedMonoBehaviour where T : Component
     {

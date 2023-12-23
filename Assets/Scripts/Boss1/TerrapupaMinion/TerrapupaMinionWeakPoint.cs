@@ -1,8 +1,9 @@
 ﻿using System;
-using Assets.Scripts.Combat;
+using Combat;
+using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Boss1.TerrapupaMinion
+namespace Boss1.TerrapupaMinion
 {
     public class TerrapupaMinionWeakPoint : MonoBehaviour, ICombatant
     {

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
-using Assets.Scripts.Managers;
+using Managers;
+using Managers.Save;
 using UnityEngine;
 
-namespace Assets.Scripts.Puzzle
+namespace Puzzle
 {
     public class StoneFootboardPuzzle : MonoBehaviour
     {

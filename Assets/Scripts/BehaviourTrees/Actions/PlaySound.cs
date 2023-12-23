@@ -1,5 +1,5 @@
+using Managers;
 using TheKiwiCoder;
-using Assets.Scripts.Managers;
 
 [System.Serializable]
 public class PlaySound : ActionNode

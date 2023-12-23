@@ -1,3 +1,5 @@
+using Managers;
+
 namespace Channels.Dialog
 {
     public enum DialogType

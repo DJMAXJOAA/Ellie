@@ -1,12 +1,12 @@
-using Assets.Scripts.Managers;
-using Assets.Scripts.Particle;
 using Channels.Boss;
 using Channels.Combat;
 using Channels.Components;
 using Channels.Type;
+using Managers;
+using Managers.Pool;
 using UnityEngine;
 
-namespace Boss.Terrapupa
+namespace Boss1.Terrapupa
 {
     public class TerrapupaStone : Poolable
     {

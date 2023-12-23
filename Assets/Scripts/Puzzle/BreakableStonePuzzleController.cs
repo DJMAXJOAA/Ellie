@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using Assets.Scripts.Controller;
-using Assets.Scripts.Utils;
 using Channels.Components;
 using Channels.Type;
+using Controller;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
-namespace Assets.Scripts.Puzzle
+namespace Puzzle
 {
     public class BreakableStonePuzzleController : BaseController
     {

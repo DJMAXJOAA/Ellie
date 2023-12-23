@@ -1,8 +1,9 @@
-﻿using Assets.Scripts.Combat;
-using Channels.Combat;
+﻿using Channels.Combat;
+using Combat;
+using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Item.Stone
+namespace Item.Stone
 {
     public class StonePrefab : BaseStone, ICombatant
     {

@@ -1,7 +1,8 @@
-﻿using Assets.Scripts.Managers;
+﻿using Data.GoogleSheet;
+using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Equipments
+namespace Equipments
 {
     public class Pickaxe : MonoBehaviour
     {

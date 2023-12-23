@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
-using Assets.Scripts.Data.GoogleSheet;
-using Assets.Scripts.Managers;
-using Assets.Scripts.Player;
 using Channels.UI;
+using Data.GoogleSheet._6000NPC;
+using Data.GoogleSheet._6100Quest;
+using Managers;
 using Outline;
+using Player;
 using UnityEngine;
 
-namespace Assets.Scripts.InteractiveObjects.NPC
+namespace InteractiveObjects.NPC
 {
     public enum NpcType
     {
@@ -22,7 +23,7 @@ namespace Assets.Scripts.InteractiveObjects.NPC
 
         [SerializeField] private int NPCIndex;
         [SerializeField] private float rotationSpeed;
-        [SerializeField] private Renderer renderer;
+        [SerializeField] private new Renderer renderer;
 
         private Coroutine _LookAtPlayer;
 

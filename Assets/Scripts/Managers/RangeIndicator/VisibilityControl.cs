@@ -1,26 +1,29 @@
 ﻿using UnityEngine;
 
-public class VisibilityControl : MonoBehaviour
+namespace Managers.RangeIndicator
 {
-    public Camera mainCamera;
-    private MeshRenderer objectRenderer;
-
-    private void Start()
+    public class VisibilityControl : MonoBehaviour
     {
-        mainCamera = Camera.main;
+        public Camera mainCamera;
+        private MeshRenderer objectRenderer;
 
-        objectRenderer = GetComponent<MeshRenderer>();
-    }
-
-    private void Update()
-    {
-        if (mainCamera.transform.position.y > transform.position.y)
+        private void Start()
         {
-            objectRenderer.enabled = true;
+            mainCamera = Camera.main;
+
+            objectRenderer = GetComponent<MeshRenderer>();
         }
-        else
+
+        private void Update()
         {
-            objectRenderer.enabled = false;
+            if (mainCamera.transform.position.y > transform.position.y)
+            {
+                objectRenderer.enabled = true;
+            }
+            else
+            {
+                objectRenderer.enabled = false;
+            }
         }
     }
 }

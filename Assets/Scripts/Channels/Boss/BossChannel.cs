@@ -1,4 +1,5 @@
 using Channels.Combat;
+using Managers;
 using UnityEngine;
 
 namespace Channels.Boss

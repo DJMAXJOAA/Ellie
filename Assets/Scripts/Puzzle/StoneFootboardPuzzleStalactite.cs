@@ -1,8 +1,8 @@
-﻿using Assets.Scripts.Managers;
-using Assets.Scripts.Particle;
+﻿using Managers;
+using Particle;
 using UnityEngine;
 
-namespace Assets.Scripts.Puzzle
+namespace Puzzle
 {
     public class StoneFootboardPuzzleStalactite : MonoBehaviour
     {

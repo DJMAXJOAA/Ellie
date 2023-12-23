@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers.Test
+namespace Managers.Pool.Test
 {
     public class PoolTestClient : MonoBehaviour
     {

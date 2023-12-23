@@ -1,9 +1,10 @@
-﻿using Assets.Scripts.Managers;
+﻿using Managers;
+using Managers.Pool;
 using UnityEngine;
 using UnityEngine.VFX;
-using VFXManager = Assets.Scripts.Managers.VFXManager;
+using VFXManager = Managers.VFXManager;
 
-namespace Assets.Scripts.Particle
+namespace Particle
 {
     public class VFXController : Poolable
     {

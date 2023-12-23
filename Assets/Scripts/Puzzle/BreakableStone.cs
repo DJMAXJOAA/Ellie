@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using Assets.Scripts.Combat;
-using Assets.Scripts.Item.Stone;
-using Assets.Scripts.Particle;
-using Assets.Scripts.Utils;
 using Channels.Combat;
 using Channels.Components;
+using Combat;
+using Item.Stone;
+using Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
-namespace Assets.Scripts.Puzzle
+namespace Puzzle
 {
     public class BreakableStone : SerializedMonoBehaviour, ICombatant
     {

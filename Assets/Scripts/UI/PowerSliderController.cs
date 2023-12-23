@@ -1,4 +1,4 @@
-using Assets.Scripts.Data.ActionData.Player;
+using Data.ActionData.Player;
 using UnityEngine;
 using UnityEngine.UI;
 

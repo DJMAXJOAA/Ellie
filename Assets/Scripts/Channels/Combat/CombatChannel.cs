@@ -1,5 +1,6 @@
-using Assets.Scripts.Combat;
-using Assets.Scripts.StatusEffects;
+using Combat;
+using Managers;
+using Player.StatusEffects;
 using UnityEngine;
 
 namespace Channels.Combat

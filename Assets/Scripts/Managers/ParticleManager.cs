@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using Assets.Scripts.Managers;
+using Managers.Pool;
+using Particle;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Assets.Scripts.Particle
+namespace Managers
 {
     public class ParticlePayload : IBaseEventPayload
     {

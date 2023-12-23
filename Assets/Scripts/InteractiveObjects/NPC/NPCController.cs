@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts.Managers;
 using InteractingColliders;
+using Managers;
+using Managers.Save;
 using UnityEngine;
 
-namespace Assets.Scripts.InteractiveObjects.NPC
+namespace InteractiveObjects.NPC
 {
     public class NPCController : MonoBehaviour
     {

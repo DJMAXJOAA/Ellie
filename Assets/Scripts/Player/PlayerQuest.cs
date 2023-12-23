@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Centers;
-using Assets.Scripts.Data.GoogleSheet;
-using Assets.Scripts.Data.GoogleSheet._4400Etc;
-using Assets.Scripts.Managers;
-using Assets.Scripts.UI.Inventory;
 using Channels.Components;
 using Channels.Dialog;
 using Channels.Type;
 using Channels.UI;
+using Data.GoogleSheet._4000Stone;
+using Data.GoogleSheet._4100Item;
+using Data.GoogleSheet._4400Etc;
+using Data.GoogleSheet._6000NPC;
+using Data.GoogleSheet._6100Quest;
+using Data.GoogleSheet._7000Dialog;
+using Managers;
+using Managers.Save;
 using Sirenix.OdinInspector;
+using UI.Inventory.Slot;
 using UnityEngine;
-using static Assets.Scripts.Managers.PlayerSavePayload;
+using static Managers.Save.PlayerSavePayload;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     public class PlayerQuest : SerializedMonoBehaviour
     {

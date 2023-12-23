@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Managers
+namespace Managers.Pool.PoolTask
 {
     public class WithdrawScheduleInfo
     {

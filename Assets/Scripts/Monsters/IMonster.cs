@@ -1,4 +1,6 @@
-namespace Assets.Scripts.Monster
+using Managers;
+
+namespace Monsters
 {
     public interface IMonster
     {

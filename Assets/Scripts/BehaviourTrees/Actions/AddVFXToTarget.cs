@@ -1,7 +1,7 @@
+using Managers;
 using UnityEngine;
 using TheKiwiCoder;
-using Assets.Scripts.Managers;
-using VFXManager = Assets.Scripts.Managers.VFXManager;
+using VFXManager = Managers.VFXManager;
 
 [System.Serializable]
 public class AddVFXToTarget : ActionNode

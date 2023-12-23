@@ -1,5 +1,6 @@
 ﻿using Channels.Components;
 using Channels.Type;
+using Managers;
 using UnityEngine;
 
 namespace Channels.Boss

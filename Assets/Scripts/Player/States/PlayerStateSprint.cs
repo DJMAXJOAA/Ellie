@@ -1,7 +1,7 @@
-﻿using Assets.Scripts.Managers;
+﻿using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Player.States
+namespace Player.States
 {
     internal class PlayerStateSprint : PlayerBaseState
     {

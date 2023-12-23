@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Assets.Scripts.Managers
+namespace Managers.Save
 {
     public class SaveLoadManager : Singleton<SaveLoadManager>
     {

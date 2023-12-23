@@ -1,8 +1,8 @@
-﻿using Assets.Scripts.Managers;
-using Cinemachine;
+﻿using Cinemachine;
+using Managers;
 using UnityEngine;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     public class PlayerAim : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace Assets.Scripts.Player
         public Transform cameraLookAt;
 
         public bool canAim = true;
-
+        
         private float zoomingCoeff;
 
         private void Update()

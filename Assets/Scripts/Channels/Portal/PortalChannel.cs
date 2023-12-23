@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Assets.Scripts.Item.Stone;
-using Assets.Scripts.Managers;
-using Channels;
+using Item.Stone;
+using Managers;
+using Managers.Pool;
 using UnityEngine;
 
-namespace Assets.Scripts.Channels
+namespace Channels.Portal
 {
     public enum PortalEventType
     {
